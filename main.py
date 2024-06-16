@@ -3,9 +3,9 @@ def main():
     text = read_book(file_path)
     word_count = word_counter(text)
     alpha = "abcdefghijklmnopqrstuvwxyz"
-    print(f"There are {word_count} words. Letters have the following frequency:")
-    letter_count = letter_counter(checker(list(text), alpha), build_dictionary(alpha))
-    print(letter_count)
+    letters = letter_counter(checker(list(text), alpha), build_dictionary(alpha))
+    print(word_count)
+    print(letters)
 
 def read_book(book):
     with open(book) as f:
