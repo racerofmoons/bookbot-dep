@@ -7,11 +7,11 @@ def main():
     converted = converter(letters)
     print_me(file_path,word_count,converted)
 
-def print_me(path, count, character):
+def print_me(path, count, characters):
     print(f"--- Begin report of {path} ---")
     print(f"{count} words found in the document")
-    print("")
-    for c in character:
+    print("") # Adds a blank line for formatting
+    for c in characters:
         letter = c["letter"]
         count = c["count"]
         print(f"The '{letter}' character was found {count} times")
@@ -42,8 +42,8 @@ def letter_counter(letters, dictionary):
         dictionary[l] += 1
     return dictionary
 
-def count_sort(dictioanry):
-    return dictioanry["count"]
+def count_sort(dictionary):
+    return dictionary["count"]
 
 def converter(letters):
     new_list = []
