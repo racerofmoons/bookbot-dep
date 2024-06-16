@@ -25,17 +25,10 @@ def word_counter(text):
     return len(words)
 
 def build_dictionary(alpha):
-    letter = {}
-    for i in range(26):
-        letter[alpha[i]] = 0
-    return letter
+    return {i: 0 for i in alpha}
 
 def checker(letter_list, alpha):
-    alpha_list = []
-    for i in letter_list:
-        if i in alpha:
-            alpha_list.append(i)
-    return alpha_list
+    return [i for i in letter_list if i in alpha]
 
 def letter_counter(letters, dictionary):
     for l in letters:
